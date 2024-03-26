@@ -1,0 +1,28 @@
+version: '1'
+services:
+  prisma:
+    container_name: freelancer-prisma-container
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./prisma:/prisma
+    environment:
+      DATABASE_URL: "mysql://pentadbir:rahsia@167.71.217.175:3306/user15"
+  nuxt:
+    container_name: freelancer-nuxt-container
+    build:
+      context: ./nuxtapp
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./nuxt:/app
+    depends_on:
+      - prisma
+    environment:
+      DATABASE_URL: "mysql://pentadbir:rahsia@167.71.217.175:3306/user15"
+    links:
+      - prisma
