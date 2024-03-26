@@ -1,0 +1,81 @@
+GET http://localhost:8080
+
+
+// READ API - fetch all data
+###
+GET http://localhost:8080/freelancers
+
+
+// CREATE API - add one data
+###
+POST http://localhost:8080/freelancer
+content-type: application/json
+
+{
+    "name": "Abid Zikry",
+    "email": "abidazra00@gmail.com",
+    "phone_number": "013-7410773",
+    "skillsets": "ASP.Net, Database",
+    "hobby": "Running"
+}
+
+// READ API - get data by field name
+###
+GET http://localhost:8080/freelancers/Abid Zikry
+
+
+// READ API - get data by search
+###
+GET http://localhost:8080/searchfreelancer/ab
+
+
+// READ API - get data by field skillsets
+###
+GET http://localhost:8080/freelancerskill/ASP.Net, Database
+
+
+// CREATE API - add many data 
+###
+POST http://localhost:8080/manyfreelancers
+content-type: application/json
+
+[
+    {
+        "name": "Zack Snyder",
+        "email": "snyder12@gmail.com",
+        "phone_number": "012-3267212",
+        "skillsets": "Database, RESTful API",
+        "hobby": "Reading Book"
+    },
+    {
+        "name": "Sally Arthur",
+        "email": "sally78@gmail.com",
+        "phone_number": "012-7536612",
+        "skillsets": "WEB API, RESTful API",
+        "hobby": "Singing"
+    }
+]
+
+//update hobby by ID
+###
+PUT http://localhost:8080/freelancer/3
+content-type: application/json
+
+{
+    "hobby": "Fishing"
+}
+
+//Update API by name
+###
+PUT http://localhost:8080/updatefreelancer/Zack Snyder
+content-type: application/json
+
+{
+    "phone_number": "014-1111111",
+    "hobby": "Watch Movie"
+}
+
+//Delete freelancer by ID
+###
+DELETE http://localhost:8080/freelancer/4
+
