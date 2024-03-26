@@ -23,13 +23,13 @@ Step to run in local repository
 4. Open terminal in VS Code and run "git checkout master" to switch branch from main to master
 
 Run without docker
-6. make sure you already install nodeJS version 16.18.0 from https://nodejs.org/dist/v16.18.0/node-v16.18.0-x64.msi
-7. Open terminal on VS Code and run "npm install" and "npm run start"
-8. run "cd nuxtapp" to open nuxtapp directory
-9. run "npm run dev" to run nuxtapp then open http://localhost:3000/
+1. make sure you already install nodeJS version 16.18.0 from https://nodejs.org/dist/v16.18.0/node-v16.18.0-x64.msi
+2. Open terminal on VS Code and run "npm install" and "npm run start"
+3. run "cd nuxtapp" to open nuxtapp directory
+4. run "npm run dev" to run nuxtapp then open http://localhost:3000/
 
 Run using docker
-6. Start docker engine on your desktop
-7. open terminal on VS Code and run "docker compose up"
-8. open http://localhost:3000/
+1. Start docker engine on your desktop
+2. open terminal on VS Code and run "docker compose up"
+3. open http://localhost:3000/
     
